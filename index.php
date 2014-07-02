@@ -3,20 +3,15 @@
   <head>
     <title>HELP CAT Suggestion and Issue</title>
     <link rel='stylesheet' type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width">
   </head>
   <body>
     <header>
       <h1>HELP CAT Suggestion and Issue</h1>
-      <nav>
-        <a href='signup.php'>Sign Up</a>
-        <a href='signin.php'>Sign In</a>
-        <a href='admin.php'>Admin</a>
-      </nav>
+      <?php include "nav.html"; ?>
     </header>
     <main>
-
-      <br>
-      <h2>Issue Submition</h2>
+      <h2>Issue and Suggestion</h2>
       <form>
         <input type='text' placeholder='Issue'><br>
         <input type='text' placeholder='Location'><br>

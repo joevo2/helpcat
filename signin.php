@@ -3,6 +3,7 @@
   <head>
     <title>Sign In</title>
     <link rel='stylesheet' type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width">
   </head>
   <body>
     <a href='index.php'><h1>HELP CAT Suggestion and Issue</h1></a>
