@@ -8,12 +8,6 @@
     <a href='index.php'><h1>HELP CAT Suggestion and Issue</h1></a>
     <h1>Sign Up</h1>
     <form>
-      <?php
-      if ($_SESSION['emailErr'] == null) {
-        $_SESSION['emailErr'] = "";
-      }
-      echo $_SESSION['emailErr'];
-      ?>
       <input type='text' placeholder='Email'><br>
       <input type='text' placeholder='Password'><br>
       <input type='text' placeholder='Confirm Password'><br>
