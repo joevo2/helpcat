@@ -12,14 +12,16 @@
     </header>
     <main>
       <h2>Issue and Suggestion</h2>
-      <form>
-        <input type='text' placeholder='Issue'><br>
-        <input type='text' placeholder='Location'><br>
-        To insert multiple tag example "lab, toilet, room 517, library"<br>
-        <input type='text' placeholder='tag'><br>
+      <form method='post'>
+        <input type='text' name='issue' placeholder='Issue'><br>
+        <input type='text' name='loc' placeholder='Location'><br>
+        To insert multiple tag separte with comma<br>
+        Example "lab, toilet, room 517, library"<br>
+        <input type='text' name='tag' placeholder='tag'><br>
         <input type='submit' value="Submit"><br>
       </form>
       <?php
+        echo "SQL: ".$sql."<br><br>";
         queryDisplay(queryAll($con, "complaint"));
       ?>
     </main>

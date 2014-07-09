@@ -40,4 +40,27 @@
 
 		return $result;
 	}
+
+    //Index.php logic
+    $issue = $loc = $tag = $sql = "";
+    $userid = 0;
+
+    if (!empty($_POST['issue']) && !empty($_POST['loc']) && !empty($_POST['tag'])) {
+      // escape variables for security
+      $issue = mysqli_real_escape_string($con, $_POST['issue']);
+      $loc = mysqli_real_escape_string($con, $_POST['loc']);
+      $tag = mysqli_real_escape_string($con, $_POST['tag']);
+
+      //To be implement as the post is associated to the user
+      $_SESSION['id'] = 1;
+      $userid = $_SESSION['id'];
+
+      $sql="INSERT INTO complaint (issue, location, tag, userid)
+      VALUES ('$issue', '$loc', '$tag', $userid)";
+
+      if (!mysqli_query($con,$sql)) {
+        die('Error: ' . mysqli_error($con));
+      }
+    }
+
 ?>
