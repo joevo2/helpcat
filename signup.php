@@ -1,4 +1,10 @@
-<?php session_start(); ?>
+<?php
+  //if logged in then redirect to index.php
+  if (isset($_SESSION['signin'])) {
+    header('Location: index.php');
+  }
+  session_start();
+?>
 <html>
   <head>
     <title>Sign Up</title>
