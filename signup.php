@@ -27,7 +27,7 @@
         if ($password == $cpassword) {
           $sql="INSERT INTO user (email, password)
           VALUES ('$email', '$password')";
-
+          header('Location: success.php');
           if (!mysqli_query($con,$sql)) {
             die('Error: ' . mysqli_error($con));
           }
