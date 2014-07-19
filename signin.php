@@ -1,4 +1,10 @@
-<?php session_start(); ?>
+<?php
+  session_start();
+  //if logged in then redirect to index.php
+  if (isset($_SESSION['signin'])) {
+    header('Location: index.php');
+  }
+?>
 <html>
   <head>
     <title>Sign In</title>
@@ -9,6 +15,7 @@
     <a href='index.php'><h1>HELP CAT Suggestion and Issue</h1></a>
     <h1>Sign In</h1>
     <?php
+      include 'function.php';
       //Print error message
       if (!empty($_SESSION['error'])) {
         echo $_SESSION['error'];

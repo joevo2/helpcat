@@ -96,8 +96,6 @@
     }
 
     //Sign in logic
-    include "function.php";
-
     $email = $password = "";
     $_SESSION['error'] = "";
 

@@ -8,7 +8,7 @@
   <body>
     <header>
       <h1>HELP CAT Suggestion and Issue</h1>
-      <?php include "nav.html"; ?>
+      <?php include "nav.php"; ?>
     </header>
     <main>
       <h2>Issue and Suggestion</h2>
