@@ -115,6 +115,9 @@
           $_SESSION['error'] = "Wrong username or password";
         }
       }
+      $_SESSION['stickyemail'] = $_POST['email'];
     }
+
+
 
 ?>
