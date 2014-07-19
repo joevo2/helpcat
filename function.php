@@ -109,6 +109,8 @@
       while($row = mysqli_fetch_array($result)) {
         if ($email == $row['email'] && $password == $row['password']) {
           $_SESSION['signin'] = true;
+          $_SESSION['user'] = $row['email'];
+          $_SESSION['type'] = $row['type'];
           header('Location: index.php');
         } else {
           $_SESSION['error'] = "Wrong username or password";

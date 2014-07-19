@@ -8,7 +8,7 @@
   <body>
     <header>
       <a href='index.php'><h1>HELP CAT Suggestion and Issue</h1></a>
-      <?php include "nav.html"; ?>
+      <?php include "nav.php"; ?>
     </header>
     <main>
       <h1>Admin Panel</h1>
