@@ -21,7 +21,7 @@
       if (!empty($_SESSION['error'])) {echo $_SESSION['error'];}
     ?>
     <form method='post'>
-      <input type='text' name='email' placeholder='Email'><br>
+      <input type='email' name='email' placeholder='Email'><br>
       <input type='password' name='password' placeholder='Password'><br>
       <input type='password' name='cpassword' placeholder='Confirm Password'><br>
       <input type='submit' value="Sign Up"><br>

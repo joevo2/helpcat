@@ -22,7 +22,7 @@
         $_SESSION['error'] = "";
       }?>
     <form method='post'>
-      <input type='text' name='email'
+      <input type='email' name='email'
       value='<?php if(isset($_SESSION['stickyemail'])) echo $_SESSION['stickyemail']; ?>'
       placeholder='Email'><br>
       <input type='password' name='password' placeholder='Password'><br>

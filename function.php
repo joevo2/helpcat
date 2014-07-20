@@ -54,8 +54,8 @@
       //To be implement as the post is associated to the user
       $email = $_SESSION['user'];
 
-      $sql="INSERT INTO complaint (issue, location, tag, email)
-      VALUES ('$issue', '$loc', '$tag', '$email')";
+      $sql="INSERT INTO complaint (issue, location, tag, email, vote)
+      VALUES ('$issue', '$loc', '$tag', '$email', 0)";
 
       if (!mysqli_query($con,$sql)) {
         die('Error: ' . mysqli_error($con));
