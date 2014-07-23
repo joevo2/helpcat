@@ -1,5 +1,5 @@
 <?php
-    include "con.php";
+    include "connection.php";
 
   	#Commonly used SQL function
   	#Use default value to create function with optional parameter
@@ -60,6 +60,8 @@
       if (!mysqli_query($con,$sql)) {
         die('Error: ' . mysqli_error($con));
       }
+    } else {
+      $_SESSION['error'] = "You must fill in everything :D";
     }
 
     //Sign up logic
