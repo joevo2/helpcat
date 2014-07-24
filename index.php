@@ -48,32 +48,33 @@
         $result = mysqli_query($con,"SELECT * FROM complaint ORDER BY timestamp DESC");
 
         while($row = mysqli_fetch_array($result)) {
-          echo "<div class='textbox'>";
-          echo "<div class='p'>";
-          echo $row['issue'];
-          echo "</div>";
-          echo "<br>\n";
-          echo $row['location'];
-          echo "<br>\n";
-          echo $row['tag'];
-          echo "<br>\n";
-          echo $row['email'];
-          echo "<br>\n";
-          echo $row['timestamp'];
-          echo "<br>\n";
-          echo "</div>\n\n";
-          if(isset($_POST['up'])) {
-            mysqli_query($con,"UPDATE complaint SET vote=vote+1 WHERE id=".$row['id'].";");
-          }
-
-          if(isset($_POST['down'])) {
-            mysqli_query($con,"UPDATE complaint SET vote=vote-1 WHERE id=".$row['id'].";");
-          }
-        }
+          print "<div class='textbox'>";
+          print "<div class='p'>";
+          print $row['issue'];
+          print "</div>";
+          print "<br>\n";
+          print $row['location'];
+          print "<br>\n";
+          print $row['tag'];
+          print "<br>\n";
+          print $row['email'];
+          print "<br>\n";
+          print $row['timestamp'];
+      ?>
+          <br>
+          <form method='post'>
+          <input type="hidden" name="delete_id" value="<?php print $row['id']; ?>">
+      		<input type="submit" class='suggestbutton' name="delete" value="Delete">
+          </form>
+        </div>
+      <?php
+    } // end loop for fetching data from database
+        if(isset($_POST['delete'])) {
+    			$PID = $_POST['delete_id'];
+    			mysqli_query($con,"DELETE FROM complaint WHERE id=$PID");
+    		}
       ?>
       </div>
-
-
     </main>
   </body>
 </html>
