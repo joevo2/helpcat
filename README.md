@@ -12,7 +12,9 @@ Beta 0.2 - Developing
 - View own post
 - Tag viewing
 - Delete individual post
+- Limit post per page
 
 Planned Feature
 ---------------
 - Up vote and down vote
+- Different view, example lastest, top etc

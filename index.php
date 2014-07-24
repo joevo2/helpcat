@@ -11,6 +11,10 @@
        margin: 0 auto;
      }
 
+    .email {
+      text-decoration: none;
+      color: white;
+    }
 
      </style>
   </head>
@@ -24,7 +28,6 @@
             <?php include "nav.php"; ?>
         </header>
     <main>
-      <h2>Issue and Suggestion</h2>
         <?php
         //if is signed in only show the form
         if (isset($_SESSION['signin'])) {
@@ -57,7 +60,8 @@
           print "<br>\n";
           print $row['tag'];
           print "<br>\n";
-          print $row['email'];
+          print "<a class='email' href='mailto:".$row['email']."' target='_top'>"
+          . $row['email'] . "</a>";
           print "<br>\n";
           print $row['timestamp'];
       ?>
