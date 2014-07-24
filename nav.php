@@ -6,6 +6,7 @@
             if(isset($_SESSION['user'])) {
               echo "<li>Welcome " . $_SESSION['user'] . "</li>"
                     . "<li><a href='myissue.php'>My Issue</a></li>"
+                    . "<li><a href='myaccount.php'>Account</a></li>"
                     . "<li><a href='signout.php'>Sign Out</a></li>";
 
               if(isset($_SESSION['type']) && $_SESSION['type'] == "admin")

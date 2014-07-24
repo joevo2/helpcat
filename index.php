@@ -62,10 +62,10 @@
           print $row['timestamp'];
       ?>
           <br>
-          <form method='post'>
+          <!--form method='post'>
           <input type="hidden" name="delete_id" value="<?php print $row['id']; ?>">
       		<input type="submit" class='suggestbutton' name="delete" value="Delete">
-          </form>
+        </form-->
         </div>
       <?php
     } // end loop for fetching data from database

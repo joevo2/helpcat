@@ -1,5 +1,11 @@
-<?php session_start(); include "function.php";?>
-<html>
+<?php
+  //if is not sign in redirect to index
+  session_start();
+  if (empty($_SESSION['signin'])) {
+    header('Location: index.php');
+  }
+  include "function.php";
+?>
   <head>
     <title>HELP CAT Suggestion and Issue</title>
     <link rel='stylesheet' type="text/css" href="style.css">
@@ -43,10 +49,10 @@
           print $row['timestamp'];
           ?>
           <br>
-          <form method='post'>
+          <!--form method='post'>
           <input type="hidden" name="delete_id" value="<?php print $row['id']; ?>">
           <input type="submit" class='suggestbutton' name="delete" value="Delete">
-          </form>
+        </form-->
         </div>
       <?php
     } // end loop for fetching data from database
