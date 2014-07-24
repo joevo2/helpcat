@@ -24,7 +24,7 @@
             <?php include "nav.php"; ?>
         </header>
     <main>
-      <h2>Issue and Suggestion</h2>
+      <h2>My Issue</h2>
         <?php
         //if is signed in only show the form
         if (isset($_SESSION['signin'])) {
@@ -45,8 +45,7 @@
       <?php }// end if ?>
       <div class="col-2">
       <?php
-        $result = mysqli_query($con,"SELECT * FROM complaint ORDER BY timestamp DESC");
-
+        $result = mysqli_query($con,"SELECT * FROM complaint WHERE email='" . $_SESSION['user'] . "' ORDER BY timestamp DESC;");
         while($row = mysqli_fetch_array($result)) {
           echo "<div class='textbox'>";
           echo "<div class='p'>";
