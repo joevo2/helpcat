@@ -27,3 +27,4 @@ Planned Feature
 - Up vote and down vote
 - Different view, example lastest, top etc
 - Search
+- Resolved issue
