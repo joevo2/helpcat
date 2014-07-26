@@ -10,6 +10,11 @@
     <title>Sign Up</title>
     <link rel='stylesheet' type="text/css" href="style.css">
     <meta name="viewport" content="width=device-width">
+    <style>
+      a.terms {
+        color: #00AFFF;
+      }
+    </style>
   </head>
   <body>
     <div class="logonav">
@@ -38,7 +43,7 @@
       <input type='email' name='email' placeholder='Email' class="field" value='<?php print $email; ?>'><br>
       <input type='password' name='password' placeholder='Password' class="field"><br>
       <input type='password' name='cpassword' placeholder='Confirm Password' class="field"><br>
-      <input type='checkbox' name='checkbox'>&nbsp I agree to to HELP CAT ISS <a href='terms.php'>Terms</a><br>
+      <input type='checkbox' name='checkbox'>&nbsp I agree to to HELP CAT ISS <a class='terms' href='terms.php'>Terms</a><br>
       <input type='submit' value="Sign Up" class="button"><br>
     </form>
     </div>

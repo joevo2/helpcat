@@ -27,13 +27,13 @@
       //Print error message
       if (!empty($_SESSION['error'])) {
         echo $_SESSION['error'];
+        $_SESSION['error'] = "";
       }?>
     <form method='post'>
       <input type='email' class="field" name='email'
       value='<?php if(isset($_SESSION['stickyemail'])) echo $_SESSION['stickyemail']; ?>'
       placeholder='Email'><br>
       <input type='password' name='password' placeholder='Password' class="field"><br>
-      <input type='checkbox' name='checkbox'>&nbsp Remember me<br>
       <input type='submit' value="Sign In" class="button"><br>
     </form>
     </div>
