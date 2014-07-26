@@ -16,7 +16,26 @@
        font-size: 40px;
        margin: 0 auto;
      }
+     .delete {
+       vertical-align: top;
+       width: 100px;
+       display: inline-block;
+     }
 
+     .suggestbutton {
+       max-width: 120px;
+       margin: 10px;
+     }
+
+     .box {
+       width: 85%;
+       display: inline-block;
+
+     }
+
+     .form {
+       margin: 0;
+     }
 
      </style>
   </head>
@@ -31,7 +50,7 @@
         </header>
     <main>
       <h2>My Issue</h2>
-      <div class="col-2">
+      <div>
       <?php
         //Delete post
         if(isset($_POST['delete'])) {
@@ -42,6 +61,7 @@
         $result = mysqli_query($con,"SELECT * FROM complaint WHERE email='" . $_SESSION['user'] . "' ORDER BY timestamp DESC;");
         while($row = mysqli_fetch_array($result)) {
           print "<div class='textbox'>";
+          print "<div class='box'>";
           print "<div class='p'>";
           print $row['issue'];
           print "</div>";
@@ -55,10 +75,13 @@
           print $row['timestamp'];
           ?>
           <br>
-          <form method='post'>
-          <input type="hidden" name="delete_id" value="<?php print $row['id']; ?>">
-          <input type="submit" class='suggestbutton' name="delete" value="Delete">
-        </form>
+          </div>
+            <div class='delete'>
+              <form method='post' class="form">
+                <input type="hidden" name="delete_id" value="<?php print $row['id']; ?>">
+                <input type="submit" class='suggestbutton' name="delete" value="Delete">
+              </form>
+            </div>
         </div>
       <?php
         } // end loop for fetching data from database
