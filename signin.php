@@ -23,7 +23,7 @@
     <div class="background">
     <h1>Sign In</h1>
     <?php
-      include 'function.php';
+      include 'logic/signinlogic.php';
       //Print error message
       if (!empty($_SESSION['error'])) {
         echo $_SESSION['error'];
@@ -33,6 +33,7 @@
       value='<?php if(isset($_SESSION['stickyemail'])) echo $_SESSION['stickyemail']; ?>'
       placeholder='Email'><br>
       <input type='password' name='password' placeholder='Password' class="field"><br>
+      <input type='checkbox' name='checkbox'>&nbsp Remember me<br>
       <input type='submit' value="Sign In" class="button"><br>
     </form>
     </div>

@@ -4,7 +4,7 @@
   if (empty($_SESSION['signin'])) {
     header('Location: index.php');
   }
-  include "function.php";
+  include "logic/function.php";
 ?>
 <html>
   <head>

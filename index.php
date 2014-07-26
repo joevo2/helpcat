@@ -1,4 +1,4 @@
-<?php session_start(); include "function.php";?>
+<?php session_start(); include "logic/indexlogic.php";?>
 <html>
   <head>
     <title>HELP CAT Suggestion and Issue</title>

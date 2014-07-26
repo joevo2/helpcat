@@ -4,7 +4,7 @@
 
           <?php
             if(isset($_SESSION['user'])) {
-              echo "<li><a href='myissue.php'>My Issue</a></li>" 
+              echo "<li><a href='myissue.php'>My Issue</a></li>"
                     . "<li><a href='myaccount.php'>" . $_SESSION['user'] . "</a></li>"
                     . "<li><a href='signout.php'>Sign Out</a></li>";
 

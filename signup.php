@@ -24,14 +24,21 @@
     <h1>Sign Up</h1>
     <?php
       //Sign up logic
-      include "function.php";
+      include "logic/signuplogic.php";
 
-      if (!empty($_SESSION['error'])) {echo $_SESSION['error'];}
+      if (!empty($_SESSION['error'])) {
+        echo $_SESSION['error'];
+        $_SESSION['error'] = "";
+      }
+      if(!empty($_SESSION['stickyemail'])) {
+        $email = $_SESSION['stickyemail'];
+      }
     ?>
     <form method='post'>
-      <input type='email' name='email' placeholder='Email' class="field"><br>
+      <input type='email' name='email' placeholder='Email' class="field" value='<?php print $email; ?>'><br>
       <input type='password' name='password' placeholder='Password' class="field"><br>
       <input type='password' name='cpassword' placeholder='Confirm Password' class="field"><br>
+      <input type='checkbox' name='checkbox'>&nbsp I agree to to HELP CAT ISS <a href='terms.php'>Terms</a><br>
       <input type='submit' value="Sign Up" class="button"><br>
     </form>
     </div>
