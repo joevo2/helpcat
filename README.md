@@ -1,5 +1,5 @@
-HELP CAT ISSUE AND SUGGESTION SYSTEM
-====================================
+HELP CAT ISS
+============
 
 Beta 0.1
 --------
@@ -18,11 +18,12 @@ Beta 0.1.1
 
 Beta 0.2 - Developing
 ---------------------
-- Tag viewing
 - Delete individual post
 - Limit post per page
+- Tag filtering
 
 Planned Feature
 ---------------
 - Up vote and down vote
 - Different view, example lastest, top etc
+- Search
