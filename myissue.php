@@ -33,6 +33,12 @@
       <h2>My Issue</h2>
       <div class="col-2">
       <?php
+        //Delete post
+        if(isset($_POST['delete'])) {
+          $PID = $_POST['delete_id'];
+          mysqli_query($con,"DELETE FROM complaint WHERE id=$PID");
+        }
+
         $result = mysqli_query($con,"SELECT * FROM complaint WHERE email='" . $_SESSION['user'] . "' ORDER BY timestamp DESC;");
         while($row = mysqli_fetch_array($result)) {
           print "<div class='textbox'>";
@@ -49,17 +55,13 @@
           print $row['timestamp'];
           ?>
           <br>
-          <!--form method='post'>
+          <form method='post'>
           <input type="hidden" name="delete_id" value="<?php print $row['id']; ?>">
           <input type="submit" class='suggestbutton' name="delete" value="Delete">
-        </form-->
+        </form>
         </div>
       <?php
-    } // end loop for fetching data from database
-        if(isset($_POST['delete'])) {
-          $PID = $_POST['delete_id'];
-          mysqli_query($con,"DELETE FROM complaint WHERE id=$PID");
-        }
+        } // end loop for fetching data from database
       ?>
       </div>
     </main>
