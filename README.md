@@ -20,11 +20,11 @@ Beta 0.2 - Developing
 ---------------------
 - Delete individual post
 - Up vote and down vote
-- Resolved issue
-- Limit post per page
 
 Planned Feature
 ---------------
 - Tag filtering
+- Limit post per page
+- Resolved issue
 - Different view, example lastest, top etc
 - Search
