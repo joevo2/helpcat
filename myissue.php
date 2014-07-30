@@ -54,7 +54,12 @@
       <?php
         //Delete post
         if(isset($_POST['delete'])) {
-          $PID = $_POST['delete_id'];
+          $PID = $_POST['id'];
+          mysqli_query($con,"DELETE FROM complaint WHERE id=$PID");
+        }
+
+        if(isset($_POST['resolve'])) {
+          $PID = $_POST['id'];
           mysqli_query($con,"DELETE FROM complaint WHERE id=$PID");
         }
 
@@ -78,8 +83,9 @@
           </div>
             <div class='delete'>
               <form method='post' class="form">
-                <input type="hidden" name="delete_id" value="<?php print $row['id']; ?>">
+                <input type="hidden" name="id" value="<?php print $row['id']; ?>">
                 <input type="submit" class='suggestbutton' name="delete" value="Delete">
+                <input type="submit" class='suggestbutton' name="resolve" value="Resolve">
               </form>
             </div>
         </div>
