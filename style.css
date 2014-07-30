@@ -173,40 +173,81 @@ a:visited {
   margin: 20px;
 }
 
+.heading {
+  padding: 2% 5%;
+  font-size: 40px;
+  margin: 0 auto;
+}
+
+/* Delete button on myissue.php*/
+.deletebox {
+  vertical-align: top;
+  width: 100px;
+  display: inline-block;
+}
+
+.deletebutton {
+  width: 100px;
+  margin: 10px;
+  -webkit-appearance: none;
+  color: white;
+  border-radius: 5px;
+  border: 0;
+  font-weight: bold;
+  background-color: rgba(233, 30, 99, 1);
+  font-size: 20px;
+  padding: 15px 10px;
+  vertical-align: top;
+display: inline-block
+
+}
+
 /* responsive */
-
 @media (max-width: 550px) {
+  .heading {
+    width: 300px;
+  }
 
-    #title {
-        font-size:20pt;
-        padding: 50px;
-    }
-    /* navigation bar */
-    nav > ul > li {
-        display: block;
-        padding: 3%;
-    }
+  #title {
+    font-size:20pt;
+    padding: 50px;
+  }
+  /* navigation bar */
+  nav > ul > li {
+    display: block;
+    padding: 3%;
+  }
 
-    /* issue and organization form elements */
-    .recbox {
-        width: 100%;
-    }
+  /* issue and organization form elements */
+  .recbox {
+    width: 100%;
+  }
 
-    .suggestbutton {
-      margin: 2% 0%;
-      width: 100%
-    }
+  .suggestbutton {
+    margin: 2% 0%;
+    width: 100%
+  }
 
-    .field {
-        width: 100%;
-        margin: 1% 0%;
-    }
-    .button {
-      margin: 2% 0;
-      width: 100%;
-    }
-    .textbox {
-      padding: 10px;
-    }
+  .field {
+    width: 100%;
+    margin: 1% 0%;
+  }
+  .button {
+    margin: 2% 0;
+    width: 100%;
+  }
+  .textbox {
+    padding: 10px;
+  }
 
+  /*Delete button on myissue.php*/
+  .deletebox {
+    vertical-align: top;
+    width: 100%;
+    display: inline-block;
+  }
+  .deletebutton {
+    width: 100%;
+    margin: 10 auto;
+  }
 }

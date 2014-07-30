@@ -12,12 +12,6 @@
     <link rel='stylesheet' type="text/css" href="style.css">
     <meta name="viewport" content="width=device-width">
     <style>
-     h2 {
-       padding: 2% 5%;
-       font-size: 40px;
-       margin: 0 auto;
-     }
-
      .button {
        background-color: rgba(229, 28, 35, 1);
      }
@@ -33,7 +27,7 @@
             <?php include "nav.php"; ?>
         </header>
     <main>
-      <h2>My Account</h2>
+      <h2 class='heading'>My Account</h2>
       <div class="background">
         <h3>Change New Password</h3>
         <?php
