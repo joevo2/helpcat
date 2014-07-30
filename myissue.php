@@ -60,7 +60,7 @@
 
         if(isset($_POST['resolve'])) {
           $PID = $_POST['id'];
-          mysqli_query($con,"DELETE FROM complaint WHERE id=$PID");
+          mysqli_query($con,"UPDATE complaint SET resolved = true WHERE id=$PID");
         }
 
         $result = mysqli_query($con,"SELECT * FROM complaint WHERE email='" . $_SESSION['user'] . "' ORDER BY timestamp DESC;");

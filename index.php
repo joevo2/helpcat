@@ -37,6 +37,11 @@
       margin: 0;
     }
 
+    .vote {
+      margin: 0 auto;
+      width: 60px;
+    }
+
      </style>
   </head>
 
@@ -92,6 +97,10 @@
             <form method='post' class="form">
               <input type="hidden" name="delete_id" value="<?php print $row['id']; ?>">
               <input type="submit" class='suggestbutton' name="up" value="Up">
+
+              <?php
+                print "<div class='vote'>Vote: ".$row['vote']."</div>";
+              ?>
               <input type="submit" class='suggestbutton' name="down" value="Down">
             </form>
           </div>

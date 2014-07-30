@@ -19,12 +19,12 @@ Beta 0.1.1
 Beta 0.2 - Developing
 ---------------------
 - Delete individual post
+- Up vote and down vote
+- Resolved issue
 - Limit post per page
-- Tag filtering
 
 Planned Feature
 ---------------
-- Up vote and down vote
+- Tag filtering
 - Different view, example lastest, top etc
 - Search
-- Resolved issue
