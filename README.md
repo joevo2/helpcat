@@ -16,16 +16,16 @@ Beta 0.1.1
 - Change account password
 - View own post
 
-Beta 0.2 - Current
+Beta 0.2
 ---------------------
 - Delete individual post
 - Up vote and down vote
 
-Beta 0.2.1 - Developing
+Beta 0.2.1 - Current
 -----------------------
 - Button CSS on myissue.php and index.php
 
-Planned Feature
+Beta 0.3 - Planned
 ---------------
 - Tag filtering
 - Limit post per page
