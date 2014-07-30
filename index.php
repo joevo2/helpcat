@@ -4,17 +4,6 @@
     <title>HELP CAT Suggestion and Issue</title>
     <link rel='stylesheet' type="text/css" href="style.css">
     <meta name="viewport" content="width=device-width">
-    <style>
-    .form {
-      margin: 0;
-    }
-
-    .vote {
-      margin: 0 auto;
-      width: 80px;
-    }
-
-     </style>
   </head>
 
     <body>
