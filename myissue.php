@@ -10,22 +10,6 @@
     <title>HELP CAT Suggestion and Issue</title>
     <link rel='stylesheet' type="text/css" href="style.css">
     <meta name="viewport" content="width=device-width">
-    <style>
-
-
-
-
-     .box {
-       width: 85%;
-       display: inline-block;
-
-     }
-
-     .form {
-       margin: 0;
-     }
-
-     </style>
   </head>
 
     <body>

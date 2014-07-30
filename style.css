@@ -7,7 +7,7 @@
 }
 
 html {
-    background-image: url('img/bg.png');
+    /*background-image: url('img/bg.png');*/
     background-attachment: fixed;
 }
 
@@ -197,9 +197,14 @@ a:visited {
   background-color: rgba(233, 30, 99, 1);
   font-size: 20px;
   padding: 15px 10px;
-  vertical-align: top;
-display: inline-block
+}
+.box {
+  width: 80%;
+  display: inline-block;
+}
 
+.form {
+  margin: 0;
 }
 
 /* responsive */

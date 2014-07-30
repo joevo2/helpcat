@@ -65,8 +65,8 @@
         <form method='post'>
           <input type='text' name='issue' placeholder='Issue' class="recbox">
           <input type='text' name='loc' placeholder='Location' class="recbox">
-        <input type='text' name='tag' placeholder='tag' class="recbox">
-            <input type='submit' value="Suggest!" class="suggestbutton"><br>
+          <input type='text' name='tag' placeholder='tag' class="recbox">
+          <input type='submit' value="Suggest!" class="suggestbutton"><br>
           To insert multiple tag separte with comma<br>
           Example "lab, toilet, room 517, library"<br>
         </form>
