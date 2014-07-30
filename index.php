@@ -5,41 +5,13 @@
     <link rel='stylesheet' type="text/css" href="style.css">
     <meta name="viewport" content="width=device-width">
     <style>
-     h2 {
-       padding: 2% 5%;
-       font-size: 40px;
-       margin: 0 auto;
-     }
-
-    .email {
-      text-decoration: none;
-      color: white;
-    }
-
-    .delete {
-      vertical-align: top;
-      width: 100px;
-      display: inline-block;
-    }
-
-    .suggestbutton {
-      max-width: 120px;
-      margin: 10px;
-    }
-
-    .box {
-      width: 85%;
-      display: inline-block;
-
-    }
-
     .form {
       margin: 0;
     }
 
     .vote {
       margin: 0 auto;
-      width: 60px;
+      width: 80px;
     }
 
      </style>
@@ -104,14 +76,14 @@
       ?>
           <br>
           </div>
-          <div class='delete'>
+          <div class='deletebox'>
             <form method='post' class="form">
               <input type="hidden" name="id" value="<?php print $row['id']; ?>">
-              <input type="submit" class='suggestbutton' name="up" value="Up">
+              <input type="submit" class='deletebutton' name="up" value="Up">
               <?php
                 print "<div class='vote'>Vote: ".$row['vote']."</div>";
               ?>
-              <input type="submit" class='suggestbutton' name="down" value="Down">
+              <input type="submit" class='deletebutton' name="down" value="Down">
             </form>
           </div>
         </div>
