@@ -58,11 +58,6 @@
           mysqli_query($con,"DELETE FROM complaint WHERE id=$PID");
         }
 
-        if(isset($_POST['resolve'])) {
-          $PID = $_POST['id'];
-          mysqli_query($con,"UPDATE complaint SET resolved = true WHERE id=$PID");
-        }
-
         $result = mysqli_query($con,"SELECT * FROM complaint WHERE email='" . $_SESSION['user'] . "' ORDER BY timestamp DESC;");
         while($row = mysqli_fetch_array($result)) {
           print "<div class='textbox'>";
@@ -85,7 +80,6 @@
               <form method='post' class="form">
                 <input type="hidden" name="id" value="<?php print $row['id']; ?>">
                 <input type="submit" class='suggestbutton' name="delete" value="Delete">
-                <input type="submit" class='suggestbutton' name="resolve" value="Resolve">
               </form>
             </div>
         </div>
