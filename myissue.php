@@ -73,6 +73,8 @@
           print $row['email'];
           print "<br>\n";
           print $row['timestamp'];
+          print "<br>\n";
+          print "Vote: ".$row['vote'];
           ?>
           <br>
           </div>

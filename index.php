@@ -71,10 +71,21 @@
           Example "lab, toilet, room 517, library"<br>
         </form>
       </div>
-      <?php }// end if ?>
+      <?php }// end if
+
+      //vote logic
+      if(isset($_POST['up'])) {
+        $PID = $_POST['id'];
+        mysqli_query($con,"UPDATE complaint SET vote = vote+1 WHERE id=$PID");
+      }
+      if(isset($_POST['down'])) {
+        $PID = $_POST['id'];
+        mysqli_query($con,"UPDATE complaint SET vote = vote-1 WHERE id=$PID");
+      }
+      ?>
       <div>
       <?php
-        $result = mysqli_query($con,"SELECT * FROM complaint ORDER BY timestamp DESC");
+        $result = mysqli_query($con,"SELECT * FROM complaint ORDER BY vote DESC, timestamp DESC ");
         while($row = mysqli_fetch_array($result)) {
           print "<div class='textbox'>";
           print "<div class='box'>";
@@ -95,9 +106,8 @@
           </div>
           <div class='delete'>
             <form method='post' class="form">
-              <input type="hidden" name="delete_id" value="<?php print $row['id']; ?>">
+              <input type="hidden" name="id" value="<?php print $row['id']; ?>">
               <input type="submit" class='suggestbutton' name="up" value="Up">
-
               <?php
                 print "<div class='vote'>Vote: ".$row['vote']."</div>";
               ?>
